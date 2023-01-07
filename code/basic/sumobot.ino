@@ -255,7 +255,7 @@ void attente5s() {
 }
 
 /**
- *
+ * Cette fonction va calculer la distance entre le robot et l'obstacle qu'il a en face de lui.
  */
 float soundDistance() {
     // le ping est déclenché par une impulsion au niveau HAUT de 2 microsecondes ou plus
