@@ -178,7 +178,7 @@ void autonome() {
         }
 
     } else if (soundDistanceCheck(1.0, 37.0) == true) {
-        // si l'adversaire est détecté à 37 cm (on laisse un offset de distance dû à la profondeur de la pelle et du capteur ultrason)
+        // si l'adversaire est détecté entre 1 et 37 cm (on laisse un offset de distance dû à la profondeur de la pelle et du capteur ultrason)
 
         // on allume les LEDs
         digitalWrite(LED_G, HIGH);
@@ -276,7 +276,7 @@ float soundDistance() {
 
 
     // la vitesse du son est de 340 m/s ou 29 microsecondes par centimètre
-    // le ping fait l'aller et retour de la distance, on divise donc par 2
+    // le ping fait l'aller et retour de la distance à la cible, on divise donc par 2
     return duration / 29 / 2;
 }
 
