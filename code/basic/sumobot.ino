@@ -177,7 +177,7 @@ void autonome() {
             delay(20);
         }
 
-    } else if (soundDistanceCheck(37.0, 1.0) == true) {
+    } else if (soundDistanceCheck(1.0, 37.0) == true) {
         // si l'adversaire est détecté à 37 cm (on laisse un offset de distance dû à la profondeur de la pelle et du capteur ultrason)
 
         // on allume les LEDs
@@ -290,7 +290,7 @@ float soundDistance() {
 boolean soundDistanceCheck(float distance_min, float distance_max) {
     float mesure = soundDistance();
 
-    return mesure < distance_min && mesure > distance_max;
+    return mesure > distance_min && mesure < distance_max;
 
     // on aurait pu écrire la fonction comme ceci, ce qui est équivalent mais plus long
 
